@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "image": "/api/placeholder/600/400",
-    "title": "Project Name",
-    "description": "Short description of the project. Just a couple of sentences to give context.",
-    "tags": ["HTML", "CSS", "JavaScript"],
-    "link": "#"
+    "image": "/images/tasklist.png",
+    "title": "TaskList",
+    "description": "A simple react SPA using supabase for authentication and CRUD functionality.",
+    "tags": ["React 18", "Tailwind 3", "TypeScript", "Supabase"],
+    "link": "https://supabase-tasklist.fly.dev/"
   },
   {
     "id": 2,
