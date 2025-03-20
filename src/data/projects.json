@@ -5,7 +5,8 @@
     "title": "TaskList",
     "description": "A simple react SPA using supabase for authentication and CRUD functionality.",
     "tags": ["React 18", "Tailwind 3", "TypeScript", "Supabase"],
-    "link": "https://supabase-tasklist.fly.dev/"
+    "link": "https://supabase-tasklist.fly.dev/",
+    "github": "https://github.com/joshua-m-jones/supabase-tasklist"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "title": "Project Name",
     "description": "Short description of the project. Just a couple of sentences to give context.",
     "tags": ["React", "Tailwind", "Firebase"],
-    "link": "#"
+    "link": "#",
+    "github": "#"
   },
   {
     "id": 3,
@@ -21,30 +23,7 @@
     "title": "Project Name",
     "description": "Short description of the project. Just a couple of sentences to give context.",
     "tags": ["Node.js", "Express", "MongoDB"],
-    "link": "#"
-  },
-  {
-    "id": 4,
-    "image": "/api/placeholder/600/400",
-    "title": "Project Name",
-    "description": "Short description of the project. Just a couple of sentences to give context.",
-    "tags": ["Vue", "Vuex", "SCSS"],
-    "link": "#"
-  },
-  {
-    "id": 5,
-    "image": "/api/placeholder/600/400",
-    "title": "Project Name",
-    "description": "Short description of the project. Just a couple of sentences to give context.",
-    "tags": ["TypeScript", "Next.js", "Vercel"],
-    "link": "#"
-  },
-  {
-    "id": 6,
-    "image": "/api/placeholder/600/400",
-    "title": "Project Name",
-    "description": "Short description of the project. Just a couple of sentences to give context.",
-    "tags": ["WordPress", "PHP", "MySQL"],
-    "link": "#"
+    "link": "#",
+    "github": "#"
   }
 ]

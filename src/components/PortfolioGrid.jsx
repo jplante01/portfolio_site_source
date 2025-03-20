@@ -15,6 +15,7 @@ const PortfolioGrid = ({ portfolioItems }) => {
               description={item.description}
               tags={item.tags}
               link={item.link}
+              github={item.github}
             />
           ))}
         </div>
