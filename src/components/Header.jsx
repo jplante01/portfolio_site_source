@@ -1,5 +1,5 @@
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaHome, FaUser } from "react-icons/fa";
-
+import { FaLinkedin, FaGithub, FaEnvelope, FaHome, FaUser, FaDev } from "react-icons/fa";
+import { BsTwitterX } from 'react-icons/bs';
 
 const NavIcon = ({ href, icon: Icon }) => {
   return (
@@ -16,12 +16,13 @@ const NavIcon = ({ href, icon: Icon }) => {
 
 const Header = () => {
   return (
-    <header className="bg-white/80 backdrop-blur-sm shadow-md sticky top-0 z-10 min-h-12 flex justify-end items-center">
+    <header className="bg-white/80 backdrop-blur-sm shadow-md min-h-12 flex justify-end ">
       <nav className="flex justify-end pr-12 items-center self-stretch">
         <ul className="flex space-x-8 items-center">
           <NavIcon href="#linkedin" icon={FaLinkedin} />
+          <NavIcon href="#linkedin" icon={FaDev} />
           <NavIcon href="#github" icon={FaGithub} />
-          <NavIcon href="#twitter" icon={FaTwitter} />
+          <NavIcon href="#twitter" icon={BsTwitterX} />
           <NavIcon href="#contact" icon={FaEnvelope} />
         </ul>
       </nav>
