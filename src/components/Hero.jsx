@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <section className="bg-gradient-to-br from-indigo-700 to-indigo-900 text-white py-24">
+    <section className=" text-white py-24">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
