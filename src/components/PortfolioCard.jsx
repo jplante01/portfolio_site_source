@@ -16,10 +16,20 @@ const PortfolioCard = ({ image, title, description, tags, link, github }) => {
           ))}
         </div>
         <div className="flex flex-row gap-8">
-          <a href={link} className="text-indigo-600 font-medium hover:text-indigo-800">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 font-medium hover:text-indigo-800"
+          >
             View Project →
           </a>
-          <a href={github} className="text-indigo-600 font-medium hover:text-indigo-800">
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-600 font-medium hover:text-indigo-800"
+          >
             View Github →
           </a>
         </div>
