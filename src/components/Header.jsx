@@ -8,7 +8,7 @@ const NavIcon = ({ href, icon: Icon }) => {
         target="_blank"
         rel="noopener noreferrer"
         href={href}
-        className="hover:text-indigo-700 transition-all duration-300 active:scale-95 active:text-indigo-800 flex items-center"
+        className="text-white hover:text-indigo-700 transition-all duration-300 active:scale-95 active:text-indigo-800 flex items-center"
       >
         <Icon className="h-8 w-8" />
       </a>
@@ -18,8 +18,8 @@ const NavIcon = ({ href, icon: Icon }) => {
 
 const Header = () => {
   return (
-    <header className="bg-white/80 backdrop-blur-sm shadow-md min-h-12 flex justify-end ">
-      <nav className="flex justify-end pr-12 items-center self-stretch">
+    <header className=" backdrop-blur-sm min-h-12 flex justify-end ">
+      <nav className="flex justify-end pr-12 pt-6 items-center self-stretch">
         <ul className="flex space-x-8 items-center">
           <NavIcon href="#linkedin" icon={FaLinkedin} />
           <NavIcon href="https://dev.to/jplante01" icon={FaDev} />
