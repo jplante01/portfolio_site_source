@@ -2,7 +2,7 @@ import PortfolioCard from './PortfolioCard';
 
 const PortfolioGrid = ({ portfolioItems }) => {
   return (
-    <section className="py-16 px-6">
+    <section className="pt-16 pb-64 px-6">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center text-gray-50 font-lexend">My Portfolio</h2>
 
