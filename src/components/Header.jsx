@@ -8,7 +8,7 @@ const NavIcon = ({ href, icon: Icon }) => {
         target="_blank"
         rel="noopener noreferrer"
         href={href}
-        className="text-white hover:text-indigo-700 transition-all duration-300 active:scale-95 active:text-indigo-800 flex items-center"
+        className="text-white hover:text-sky-400 transition-all duration-300 active:scale-95 active:text-indigo-800 flex items-center"
       >
         <Icon className="h-8 w-8" />
       </a>

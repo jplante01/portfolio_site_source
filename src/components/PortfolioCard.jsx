@@ -1,6 +1,6 @@
 const PortfolioCard = ({ image, title, description, tags, link, github }) => {
   return (
-    <div className="bg-gray-100 p-6 rounded-lg overflow-hidden shadow-lg hover:shadow-xl shadow-gray-800 transition-all duration-300 hover:scale-105 border border-gray-200">
+    <div className="bg-slate-200 p-6 rounded-lg overflow-hidden shadow-lg hover:shadow-xl shadow-gray-800 transition-all duration-300 hover:scale-105 border border-gray-200">
       <img src={image} alt={title} className="w-full h-48 object-cover mb-4 rounded-lg border border-2" />
       <div className="">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
@@ -9,7 +9,7 @@ const PortfolioCard = ({ image, title, description, tags, link, github }) => {
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-indigo-100 text-indigo-800 text-xs font-medium px-2.5 py-0.5 rounded"
+              className="bg-indigo-100 text-indigo-800 text-s font-medium px-2.5 py-0.5 rounded"
             >
               {tag}
             </span>
@@ -20,7 +20,7 @@ const PortfolioCard = ({ image, title, description, tags, link, github }) => {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-indigo-600 font-medium hover:text-indigo-800"
+            className="text-sky-600 font-medium hover:text-sky-400"
           >
             View Project →
           </a>
@@ -28,7 +28,7 @@ const PortfolioCard = ({ image, title, description, tags, link, github }) => {
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-indigo-600 font-medium hover:text-indigo-800"
+            className="text-sky-600 font-medium hover:text-sky-400"
           >
             View Github →
           </a>
