@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 // Main App Component
 const Home = ({ portfolioItems = [] }) => {
   return (
-    <div className="bg-gradient-to-br from-purple-700 via-purple-900 to-gray-900 flex flex-col min-h-screen">
+    <div className="background-gradient flex flex-col min-h-screen">
       <Header />
       <HeroSection />
       {portfolioItems && <PortfolioGrid portfolioItems={portfolioItems} />}
