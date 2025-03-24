@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope, FaDev, FaBars, FaTimes } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope, FaDev, FaTimes } from "react-icons/fa";
 import { BsTwitterX } from 'react-icons/bs';
-
+import { GrContact } from 'react-icons/gr';
 const NavIcon = ({ href, icon: Icon }) => {
   return (
     <li className="flex items-center">
@@ -34,7 +34,7 @@ const Header = () => {
       >
         {isMenuOpen ? 
           <FaTimes className="h-8 w-8 text-white" /> : 
-          <FaBars className="h-8 w-8 text-white" />
+          <GrContact className="h-8 w-8 text-white" />
         }
       </button>
       
