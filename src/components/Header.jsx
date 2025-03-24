@@ -1,4 +1,5 @@
-import { FaLinkedin, FaGithub, FaEnvelope, FaHome, FaUser, FaDev } from "react-icons/fa";
+import { useState } from 'react';
+import { FaLinkedin, FaGithub, FaEnvelope, FaDev, FaBars, FaTimes } from "react-icons/fa";
 import { BsTwitterX } from 'react-icons/bs';
 
 const NavIcon = ({ href, icon: Icon }) => {
@@ -17,9 +18,41 @@ const NavIcon = ({ href, icon: Icon }) => {
 };
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  
   return (
-    <header className=" backdrop-blur-sm min-h-12 flex justify-end ">
-      <nav className="flex justify-end pr-12 pt-6 items-center self-stretch">
+    <header className="backdrop-blur-sm min-h-12 flex justify-end items-center">
+      {/* Mobile menu button - only visible on smaller screens */}
+      <button 
+        className="md:hidden pr-6 pt-6"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        {isMenuOpen ? 
+          <FaTimes className="h-8 w-8 text-white" /> : 
+          <FaBars className="h-8 w-8 text-white" />
+        }
+      </button>
+      
+      {/* Mobile navigation - only shown when menu is open */}
+      {isMenuOpen && (
+        <div className="md:hidden fixed top-16 inset-x-0 bg-gray-900/90 backdrop-blur-md z-50">
+          <ul className="flex flex-col items-center space-y-6 py-8">
+            <NavIcon href="#linkedin" icon={FaLinkedin} />
+            <NavIcon href="https://dev.to/jplante01" icon={FaDev} />
+            <NavIcon href="https://github.com/jplante01" icon={FaGithub} />
+            <NavIcon href="https://x.com/jplante01454345" icon={BsTwitterX} />
+            <NavIcon href="#contact" icon={FaEnvelope} />
+          </ul>
+        </div>
+      )}
+      
+      {/* Desktop navigation */}
+      <nav className="md:flex justify-end pr-12 pt-6 items-center self-stretch hidden">
         <ul className="flex space-x-8 items-center">
           <NavIcon href="#linkedin" icon={FaLinkedin} />
           <NavIcon href="https://dev.to/jplante01" icon={FaDev} />
