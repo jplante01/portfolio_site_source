@@ -5,27 +5,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Source+Code+Pro:wght@200..900&display=swap');
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
-
 .background-gradient {
-background: linear-gradient(152deg, rgba(1,98,105,1) 0%, rgba(9,26,28,1) 30%)   }
+  background: linear-gradient(152deg, rgba(1, 98, 105, 1) 0%, rgba(9, 26, 28, 1) 30%);
+}
 
+.portfolio-span {
+  letter-spacing: .7em;
+  word-spacing: 2em;
+  font-size: 2em;
+  transform: scaleY(1.5); /* Makes text 1.5x taller without changing width */
+  transform-origin: center; /* Sets the origin point for the transformation */
+  font-weight: 400;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
