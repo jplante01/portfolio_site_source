@@ -38,7 +38,7 @@ const EmailCopyForm = () => {
   };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center pt-2">
       <div className="flex w-full max-w-md items-center rounded-md border border-gray-300 bg-white shadow-sm overflow-hidden">
         <input
           type="text"
@@ -99,13 +99,15 @@ const MobileMenu = () => {
               animation: 'slideIn 0.3s ease-out forwards',
             }}
           >
-            <div className="flex flex-col p-4">
-              <ul className="flex flex-row items-center space-x-6 p-8">
+            <div className="flex flex-col px-4 py-6">
+              <span className="text-gray-50 text-xl font-bold">Socials</span>
+              <ul className="flex flex-row items-center justify-between pt-2">
                 <NavIcon href="#linkedin" icon={FaLinkedin} />
                 <NavIcon href="https://dev.to/jplante01" icon={FaDev} />
                 <NavIcon href="https://github.com/jplante01" icon={FaGithub} />
                 <NavIcon href="https://x.com/jplante01454345" icon={BsTwitterX} />
               </ul>
+              <span className="text-gray-50 text-xl pt-8  font-bold">Email</span>
               <EmailCopyForm />
             </div>
           </div>
