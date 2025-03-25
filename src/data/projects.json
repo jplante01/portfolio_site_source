@@ -7,23 +7,5 @@
     "tags": ["React 18", "Tailwind 3", "TypeScript", "Supabase"],
     "link": "https://supabase-tasklist.fly.dev/",
     "github": "https://github.com/jplante01/task_manager"
-  },
-  {
-    "id": 2,
-    "image": "/api/placeholder/600/400",
-    "title": "Project Name",
-    "description": "Short description of the project. Just a couple of sentences to give context.",
-    "tags": ["React", "Tailwind", "Firebase"],
-    "link": "#",
-    "github": "#"
-  },
-  {
-    "id": 3,
-    "image": "/api/placeholder/600/400",
-    "title": "Project Name",
-    "description": "Short description of the project. Just a couple of sentences to give context.",
-    "tags": ["Node.js", "Express", "MongoDB"],
-    "link": "#",
-    "github": "#"
   }
 ]

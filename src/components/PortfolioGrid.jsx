@@ -1,4 +1,5 @@
 import PortfolioCard from './PortfolioCard';
+import ComingSoonCard from './ComingSoonCard';
 
 const PortfolioGrid = ({ portfolioItems }) => {
   return (
@@ -17,6 +18,7 @@ const PortfolioGrid = ({ portfolioItems }) => {
               github={item.github}
             />
           ))}
+          <ComingSoonCard />
         </div>
       </div>
     </section>
