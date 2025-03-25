@@ -27,32 +27,46 @@ const Header = () => {
   return (
     <header className="backdrop-blur-sm min-h-12 flex justify-end items-center">
       {/* Mobile menu button - only visible on smaller screens */}
-      <button 
-        className="md:hidden pr-6 pt-6"
-        onClick={toggleMenu}
-        aria-label="Toggle menu"
-      >
-        {isMenuOpen ? 
-          <FaTimes className="h-8 w-8 text-white" /> : 
+      <button className="sm:hidden pr-6 pt-6 z-50" onClick={toggleMenu} aria-label="Toggle menu">
+        {isMenuOpen ? (
+          <FaTimes className="h-8 w-8 text-white" />
+        ) : (
           <GrContact className="h-8 w-8 text-white" />
-        }
+        )}
       </button>
-      
+
       {/* Mobile navigation - only shown when menu is open */}
       {isMenuOpen && (
-        <div className="md:hidden fixed top-16 inset-x-0 bg-gray-900/90 backdrop-blur-md z-50">
-          <ul className="flex flex-col items-center space-y-6 py-8">
-            <NavIcon href="#linkedin" icon={FaLinkedin} />
-            <NavIcon href="https://dev.to/jplante01" icon={FaDev} />
-            <NavIcon href="https://github.com/jplante01" icon={FaGithub} />
-            <NavIcon href="https://x.com/jplante01454345" icon={BsTwitterX} />
-            <NavIcon href="#contact" icon={FaEnvelope} />
-          </ul>
-        </div>
+        <>
+          {/* Blurred background overlay - sized to viewport */}
+          <div
+            className="fixed top-0 left-0 w-screen h-screen bg-black/30 backdrop-blur-sm z-40 transition-opacity duration-300"
+            onClick={toggleMenu}
+            style={{ animation: 'fadeIn 0.2s ease-out forwards' }}
+          />
+
+          {/* Menu */}
+          <div
+            className="sm:hidden fixed top-16 right-4 bg-transparent z-50 rounded-lg border-2 border-white
+      transform transition-all duration-300 ease-out origin-top-right
+      animate-slideIn"
+            style={{
+              animation: 'slideIn 0.3s ease-out forwards',
+            }}
+          >
+            <ul className="flex flex-col items-center space-y-6 p-8">
+              <NavIcon href="#linkedin" icon={FaLinkedin} />
+              <NavIcon href="https://dev.to/jplante01" icon={FaDev} />
+              <NavIcon href="https://github.com/jplante01" icon={FaGithub} />
+              <NavIcon href="https://x.com/jplante01454345" icon={BsTwitterX} />
+              <NavIcon href="#contact" icon={FaEnvelope} />
+            </ul>
+          </div>
+        </>
       )}
-      
+
       {/* Desktop navigation */}
-      <nav className="md:flex justify-end pr-12 pt-6 items-center self-stretch hidden">
+      <nav className="sm:flex justify-end pr-12 pt-6 items-center self-stretch hidden">
         <ul className="flex space-x-8 items-center">
           <NavIcon href="#linkedin" icon={FaLinkedin} />
           <NavIcon href="https://dev.to/jplante01" icon={FaDev} />
