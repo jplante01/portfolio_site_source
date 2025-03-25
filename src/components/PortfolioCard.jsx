@@ -1,10 +1,10 @@
 const PortfolioCard = ({ image, title, description, tags, link, github }) => {
   return (
-    <div className="bg-slate-200 p-6 rounded-lg overflow-hidden shadow-lg hover:shadow-xl shadow-gray-800 transition-all duration-300 hover:scale-105 border border-gray-200">
+    <div className="bg-transparent p-6 rounded-lg overflow-hidden shadow-lg hover:shadow-xl shadow-gray-800 transition-all duration-300 hover:scale-105 border border-gray-200">
       <img src={image} alt={title} className="w-full h-48 object-cover mb-4 rounded-lg border border-2" />
       <div className="">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
+        <h3 className="text-xl text-gray-200 font-bold mb-2">{title}</h3>
+        <p className="text-gray-50 mb-4">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {tags.map((tag, index) => (
             <span
