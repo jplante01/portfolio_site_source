@@ -19,6 +19,7 @@ const PortfolioGrid = ({ portfolioItems }) => {
             />
           ))}
           <ComingSoonCard />
+          <ComingSoonCard />
         </div>
       </div>
     </section>
