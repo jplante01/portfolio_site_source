@@ -7,7 +7,7 @@ const HeroSection = () => {
             Hi, I&apos;m <span className="text-sky-300 font-sourceCodePro">Jeffrey</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 text-indigo-100 leading-relaxed font-lexend">
-            A passionate developer focused on creating beautiful and functional web experiences
+            A passionate developer focused on creating beautiful and functional web experiences.Please take a look at my portfolio projects below, and contact me if you would like to work together.
           </p>
         </div>
       </div>
