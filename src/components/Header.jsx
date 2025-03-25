@@ -133,7 +133,7 @@ const EnvelopeIconWithDropdown = () => {
 
       {isDropdownOpen && (
         <div
-          className="fixed top-16 right-12 px-4 pt-12 pb-4 bg-transparent z-50 rounded-lg border-2 border-white
+          className="fixed top-20 right-12 px-4 pt-12 pb-4 bg-transparent z-50 rounded-lg border-2 border-white
              transform transition-all duration-300 ease-out origin-top-right
              animate-slideIn"
         >
