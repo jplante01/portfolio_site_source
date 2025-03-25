@@ -11,7 +11,7 @@ const NavIcon = ({ href, icon: Icon }) => {
         target="_blank"
         rel="noopener noreferrer"
         href={href}
-        className="text-white hover:text-sky-400 transition-all duration-300 active:scale-95 active:text-indigo-800 flex items-center"
+        className="text-gray-50 hover:text-sky-400 transition-all duration-300 active:scale-95 active:text-indigo-800 flex items-center"
       >
         <Icon className="h-8 w-8" />
       </a>
@@ -62,43 +62,39 @@ const EmailCopyForm = () => {
   );
 };
 
-const Header = () => {
+// MobileMenu.jsx
+const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="backdrop-blur-sm min-h-12 flex justify-end items-center">
-      {/* Mobile menu button - only visible on smaller screens */}
-<a
-  className="sm:hidden pr-6 pt-6 z-50 hover:text-sky-400 cursor-pointer"
-  onClick={toggleMenu}
-  aria-label="Toggle menu"
->
-  {isMenuOpen ? (
-    <FaTimes className="h-8 w-8 text-white" />
-  ) : (
-    <GrContact className="h-8 w-8 text-white" />
-  )}
-</a>
+    <div className="sm:hidden pr-6 pt-6 z-50 hover:text-sky-400 cursor-pointer">
+      <a
+        className="pr-6 pt-6 z-50 hover:text-sky-400 cursor-pointer"
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        {isMenuOpen ? (
+          <FaTimes className="h-8 w-8 text-white" />
+        ) : (
+          <GrContact className="h-8 w-8 text-white" />
+        )}
+      </a>
 
-      {/* Mobile navigation - only shown when menu is open */}
       {isMenuOpen && (
         <>
-          {/* Blurred background overlay - sized to viewport */}
           <div
             className="fixed top-0 left-0 w-screen h-screen bg-black/30 backdrop-blur-sm z-40 transition-opacity duration-300"
             onClick={toggleMenu}
             style={{ animation: 'fadeIn 0.2s ease-out forwards' }}
           />
-
-          {/* Menu */}
           <div
-            className="sm:hidden fixed top-16 right-4 bg-transparent z-50 rounded-lg border-2 border-white
-      transform transition-all duration-300 ease-out origin-top-right
-      animate-slideIn"
+            className="fixed top-16 right-4 bg-transparent z-50 rounded-lg border-2 border-white
+             transform transition-all duration-300 ease-out origin-top-right
+             animate-slideIn"
             style={{
               animation: 'slideIn 0.3s ease-out forwards',
             }}
@@ -115,17 +111,69 @@ const Header = () => {
           </div>
         </>
       )}
+    </div>
+  );
+};
+const EnvelopeIconWithDropdown = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-      {/* Desktop navigation */}
-      <nav className="sm:flex justify-end pr-12 pt-6 items-center self-stretch hidden">
-        <ul className="flex space-x-8 items-center">
-          <NavIcon href="#linkedin" icon={FaLinkedin} />
-          <NavIcon href="https://dev.to/jplante01" icon={FaDev} />
-          <NavIcon href="https://github.com/jplante01" icon={FaGithub} />
-          <NavIcon href="https://x.com/jplante01454345" icon={BsTwitterX} />
-          <NavIcon href="#contact" icon={FaEnvelope} />
-        </ul>
-      </nav>
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  return (
+    <li className="flex items-center relative">
+      <a
+        className="text-gray-50 hover:text-sky-400 transition-all duration-300 active:scale-95 active:text-indigo-800 flex items-center"
+        onClick={toggleDropdown}
+        aria-label="Contact me"
+      >
+        <FaEnvelope className="h-8 w-8" />
+      </a>
+
+      {isDropdownOpen && (
+        <div
+          className="fixed top-16 right-12 px-4 pt-12 pb-4 bg-transparent z-50 rounded-lg border-2 border-white
+             transform transition-all duration-300 ease-out origin-top-right
+             animate-slideIn"
+        >
+          <div className="flex justify-between items-center mb-2">
+            <span className="text-gray-50 text-xl font-bold">Email:</span>
+            <button
+              onClick={toggleDropdown}
+              className="text-gray-50 hover:text-sky-400 translate-y-[-38px] translate-x-[6px]"
+              aria-label="Close"
+            >
+              <FaTimes className="h-6 w-6" />
+            </button>
+          </div>
+          <EmailCopyForm />
+        </div>
+      )}
+    </li>
+  );
+};
+// DesktopNav.jsx
+const DesktopNav = () => {
+  return (
+    <nav className="sm:flex justify-end pr-12 pt-6 items-center self-stretch hidden">
+      <ul className="flex space-x-8 items-center">
+        <NavIcon href="#linkedin" icon={FaLinkedin} />
+        <NavIcon href="https://dev.to/jplante01" icon={FaDev} />
+        <NavIcon href="https://github.com/jplante01" icon={FaGithub} />
+        <NavIcon href="https://x.com/jplante01454345" icon={BsTwitterX} />
+        <EnvelopeIconWithDropdown />
+      </ul>
+    </nav>
+  );
+};
+
+// Header.jsx
+const Header = () => {
+  return (
+    <header className="backdrop-blur-sm min-h-12 flex justify-end items-center">
+      <MobileMenu />
+      <DesktopNav />
     </header>
   );
 };
