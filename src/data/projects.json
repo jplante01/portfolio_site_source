@@ -5,7 +5,7 @@
     "title": "TaskList",
     "description": "A simple react SPA using supabase for authentication and CRUD functionality.",
     "tags": ["React 18", "Tailwind 3", "TypeScript", "Supabase"],
-    "link": "https://supabase-tasklist.fly.dev/",
+    "link": "https://taskmanager.jplante.dev/",
     "github": "https://github.com/jplante01/task_manager"
   }
 ]
