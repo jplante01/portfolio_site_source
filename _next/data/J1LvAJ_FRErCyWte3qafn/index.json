@@ -1,0 +1,1 @@
+{"pageProps":{"portfolioItems":[{"id":1,"image":"/images/tasklist.png","title":"TaskList","description":"A simple react SPA using supabase for authentication and CRUD functionality.","tags":["React 18","Tailwind 3","TypeScript","Supabase"],"link":"https://taskmanager.jplante.dev/","github":"https://github.com/jplante01/task_manager"}]},"__N_SSG":true}
