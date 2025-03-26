@@ -176,7 +176,7 @@ const DesktopNav = () => {
 // Header.jsx
 const Header = () => {
   return (
-    <header className="backdrop-blur-sm min-h-12 flex justify-end items-center">
+    <header className=" min-h-12 flex justify-end items-center">
       <MobileMenu />
       <DesktopNav />
     </header>
