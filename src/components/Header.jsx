@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaEnvelope, FaDev, FaTimes } from 'react-icons/fa';
 import { BsTwitterX } from 'react-icons/bs';
 import { GrContact } from 'react-icons/gr';
@@ -65,7 +65,7 @@ const EmailCopyForm = () => {
 // MobileMenu.jsx
 const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -87,9 +87,12 @@ const MobileMenu = () => {
       {isMenuOpen && (
         <>
           <div
-            className="fixed top-0 left-0 w-screen h-screen bg-black/30 backdrop-blur-sm z-40 transition-opacity duration-300"
+            className="fixed top-0 left-0 w-screen bg-black/30 backdrop-blur-sm z-40 transition-opacity duration-300"
             onClick={toggleMenu}
-            style={{ animation: 'fadeIn 0.2s ease-out forwards' }}
+            style={{
+              animation: 'fadeIn 0.2s ease-out forwards',
+              height: `${document.documentElement.scrollHeight}px`,
+            }}
           />
           <div
             className="fixed top-16 right-4 bg-transparent z-50 rounded-lg border-2 border-white
