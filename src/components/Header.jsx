@@ -163,7 +163,7 @@ const DesktopNav = () => {
   return (
     <nav className="sm:flex justify-end pr-12 pt-6 items-center self-stretch hidden">
       <ul className="flex space-x-8 items-center">
-        <NavIcon href="#linkedin" icon={FaLinkedin} />
+        <NavIcon href="https://www.linkedin.com/in/jeffrey-plante-b34024224/" icon={FaLinkedin} />
         <NavIcon href="https://dev.to/jplante01" icon={FaDev} />
         <NavIcon href="https://github.com/jplante01" icon={FaGithub} />
         <NavIcon href="https://x.com/jplante01454345" icon={BsTwitterX} />
